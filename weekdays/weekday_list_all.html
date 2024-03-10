@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Weekdays</title>
+</head>
+<body>
+    <h1>All Weekdays</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Uzbek</th>
+                <th>English</th>
+                <th>Russian</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for day in weekdays.uz %}
+                <tr>
+                    <td>{{ day }}</td>
+                    <td>{{ weekdays.en|index:forloop.counter0 }}</td>
+                    <td>{{ weekdays.ru|index:forloop.counter0 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
